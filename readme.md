@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/lordadamson/weresick.png?label=ready&title=Ready)](https://waffle.io/lordadamson/weresick)
 # We're Sick
 [![Build Status](https://travis-ci.org/lordadamson/weresick.svg?branch=master)](https://travis-ci.org/lordadamson/weresick) <br/>
 This is a website based on a philosophy.
