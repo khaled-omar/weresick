@@ -14,8 +14,6 @@
                         <!-- Post Content -->
                         <div class="form-group">
 
-                            <label for="post-content" class="col-sm-3 control-label">اكتب</label>
-
                             <input type="hidden" name='journal_id' value="{{ $journal->id }}"/>
 
                             <div class="col-sm-6">
@@ -43,7 +41,7 @@
                                       <a href="{{url('/journal/'.$journal->id)}}">{{$post->user->name}}</a>
                                    </span>
                                    <br>
-                                   <small style="padding-right:25px;">يكتب :</small>
+                                   <small style="padding-right:25px;">يكتب:</small>
                                 </p>
                             </div>
                             <div class="content col-lg-9 text-justify">
@@ -57,9 +55,9 @@
                                     <span class="caret"></span>
                                   </button>
                                   <ul class="dropdown-menu">
-                                    <li class="text-left"><a href="#">Edit Post</a></li>
-                                    <li class="text-left"><a href="#">Delete Post</a></li>
-                                    <li class="text-left"><a href="#">Report This Post</a></li>
+                                    <li class="text-left"><a href="#">تعديل</a></li>
+                                    <li class="text-left"><a href="#">حذف</a></li>
+                                    <li class="text-left"><a href="#">الإبلاغ عن محتوى غير مناسب أو مسيء</a></li>
                                   </ul>
                                 </div>
                             </div>
