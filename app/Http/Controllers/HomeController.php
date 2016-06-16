@@ -21,30 +21,33 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the user's journal.
+     * Redirect the user to his Journal.
      *
      * @return \Illuminate\Http\Response
      */
     public function myJournal(Request $request)
     {
-        $journal_id = $request->user()->journal_id;
+        $journal_id = $request->user()->getJournalID();
         return redirect('/journal/'.$journal_id);
     }
 
+    /**
+     * Show the user's journal.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function getJournal(Request $request)
     {
+        //if the user should only be able to see his journal , we should check
+        //here whether the journal id belongs to him
         $journal_id = $request->id;
+
         $journal = Journal::find($journal_id);
-        $posts = Post::where('journal_id', $journal_id)->get();
-        $post_user = array();
-        foreach ($posts as $post)
-        {
-            $post_user[$post->id] = [User::find($post->user_id)->name => $post->content];
-        }
+        $posts = $journal->posts()->with('user')->get();
+
         return view('journal', [
             'posts' => $posts,
-            'journal' => $journal,
-            'post_user' => $post_user
+            'journal' => $journal
         ]);
     }
 

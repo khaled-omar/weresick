@@ -33,4 +33,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Post');
     }
+
+    public function getJournalID()
+    {
+       return $this->journal()->get()->first()->id;
+    }
 }

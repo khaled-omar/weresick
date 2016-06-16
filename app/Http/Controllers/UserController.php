@@ -34,6 +34,11 @@ class UserController extends Controller
         if ($validator->fails()) {
             return Redirect::back();
         }
+        //This checks whether the journal belongs to the user
+        if ( $request->user()->getJournalID() != $request->input('journal_id') ) {
+           return Redirect::back();
+        }
+
         $user = $request->user();
 
         $post = new Post;
