@@ -21,16 +21,21 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the user's journal.
+     * Redirect the user to his Journal.
      *
      * @return \Illuminate\Http\Response
      */
     public function myJournal(Request $request)
     {
-        $journal_id = $request->user()->journal_id;
+        $journal_id = $request->user()->getJournalID();
         return redirect('/journal/'.$journal_id);
     }
 
+    /**
+     * Show the user's journal.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function getJournal(Request $request)
     {
         $journal_id = $request->id;
