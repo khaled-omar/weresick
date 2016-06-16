@@ -23,6 +23,14 @@
         }
         @yield('custom_css')
     </style>
+    <p>
+        <script src='/tinymce/js/tinymce/tinymce.min.js'></script>
+    </p>
+    <script>
+      tinymce.init({
+        selector: '#post-content',
+      });
+    </script>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">

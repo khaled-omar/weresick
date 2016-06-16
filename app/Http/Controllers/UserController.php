@@ -36,9 +36,14 @@ class UserController extends Controller
         }
 
         $user = $request->user();
-
+        $allowedable_Tags = '<a></a><p></p><b></b><h1></h1><h2></h2>
+            <h3></h3><h4></h4><h5></h5><h6></h6><sub></sub><em></em>
+            <sup></sup><blockquote></blockquote><ul></ul><s></s>
+            <ol></ol><li></li><div></div><pre></pre><span></span>
+            <strong></strong><code></code>';
         $post = new Post;
-        $post->content = $request->content;
+        //$out = htmLawed($in, array('safe'=>1));
+        $post->content = strip_tags(html_entity_decode($request->content),$allowedable_Tags ) ;
         $post->user_id = $user->id;
 
         $journal = Journal::find($request->journal_id);

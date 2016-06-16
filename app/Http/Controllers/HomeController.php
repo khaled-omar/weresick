@@ -8,7 +8,6 @@ use App\Journal;
 use App\User;
 use App\Http\Requests;
 use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
@@ -49,7 +48,10 @@ class HomeController extends Controller
      */
     public function myJournal(Request $request)
     {
-        $journal_id = $request->user()->getJournalID();
+        //$journal_id = $request->user()->getJournalID();
+
+         $journal_id = Auth::user()->journal->id;
+         //return  $journal_id;
         return redirect('/journal/'.$journal_id);
     }
 

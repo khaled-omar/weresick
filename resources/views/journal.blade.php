@@ -18,24 +18,29 @@
                 <div class="panel-heading"><h2>{{$journal->name}}</h2></div>
                 <div class="panel-body">
                 <!-- New Post Form -->
-                    <form action="{{ url('post')}}" method="POST" class="form-horizontal">
+                    <form action="{{ url('/post')}}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
 
                         <!-- Post Content -->
                         <div class="form-group">
-
+                           
                             <input type="hidden" name='journal_id' value="{{ $journal->id }}"/>
 
-                            <div class="col-sm-12">
-                                <textarea class="form-control" id="post-content" name="content" rows="5" cols="40">{{ old('post') }}</textarea>
+                            <div style="width:96%; margin: 2% " class="col-sm-6">
+                                <textarea name="content" id="post-content" class="form-control" rows="20" required="required">
+                                    {{ old('post') }}
+                                </textarea>
                             </div>
+
+
                         </div>
 
                         <!-- Post Button -->
-                        <div class="form-group">
-                            <div class="col-sm-offset-4 col-sm-4">
-                                <button type="submit" id="postButton" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>اكتب
+
+                        <div class=" form-group ">
+                            <div style ="margin-right:49%;">
+                                <button type="submit" class="btn btn-primary" >
+                                    <i class="fa fa-btn fa-plus"></i>نشــر
                                 </button>
                             </div>
                         </div>
@@ -55,7 +60,10 @@
                                 </p>
                             </div>
                             <div class="content col-lg-9 text-justify">
-                                <p style="font-size:1.4em;">{{$post->content}}</p>
+
+                                <p style="font-size:1.4em;">
+                                    {!!$post->content!!} 
+                                </p>
                             </div>
                             <div class="edit text-center col-lg-1" style="padding-top:25px;">
                                 <div class="dropdown">
