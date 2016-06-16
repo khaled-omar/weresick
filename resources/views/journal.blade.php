@@ -19,7 +19,7 @@
                             <input type="hidden" name='journal_id' value="{{ $journal->id }}"/>
 
                             <div class="col-sm-6">
-                                <textarea class="form-control" id="post-content" name="content" rows="5" cols="40">{{ old('post') }}</textarea>
+                                <input type="text" name="content" id="post-content" class="form-control" value="{{ old('post') }}">
                             </div>
                         </div>
 
@@ -34,20 +34,13 @@
                     </form>
                     <hr />
                     <div class="posts">
-                        @foreach ($posts as $post_id => $post)
+                        @foreach ($post_user as $post_id => $post)
                         <div class="post panel panel-default panel-body">
                             <div class="user col-lg-2" style="font-family: 'Amiri', serif;">
-                                <p>
-                                   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                    <span class="lead">
-                                       <a href="{{url('/journal/'.$journal->id)}}">{{$post->user->name}}</a>
-                                    </span>
-                                    <br>
-                                    <small style="padding-right:25px;">يكتب :</small>
-                                 </p>
+                                <p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="lead"><a href="{{url('/journal/'.$journal->id)}}">{{key($post)}}</a></span><br><small style="padding-right:25px;">يكتب :</small></p>
                             </div>
                             <div class="content col-lg-9 text-justify">
-                                <p style="font-size:1.4em;">{{$post->content}}</p>
+                                <p style="font-size:1.4em;">{{current($post)}}</p>
                             </div>
                             <div class="edit text-center col-lg-1" style="padding-top:25px;">
                                 <div class="dropdown">

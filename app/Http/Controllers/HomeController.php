@@ -38,16 +38,18 @@ class HomeController extends Controller
      */
     public function getJournal(Request $request)
     {
-        //if the user should only be able to see his journal , we should check
-        //here whether the journal id belongs to him
         $journal_id = $request->id;
-
         $journal = Journal::find($journal_id);
-        $posts = $journal->posts()->with('user')->get();
-
+        $posts = Post::where('journal_id', $journal_id)->get();
+        $post_user = array();
+        foreach ($posts as $post)
+        {
+            $post_user[$post->id] = [User::find($post->user_id)->name => $post->content];
+        }
         return view('journal', [
             'posts' => $posts,
-            'journal' => $journal
+            'journal' => $journal,
+            'post_user' => $post_user
         ]);
     }
 
