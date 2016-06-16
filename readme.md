@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.org/lordadamson/weresick.svg?branch=master)](https://travis-ci.org/lordadamson/weresick) [![Stories in Ready](https://badge.waffle.io/lordadamson/weresick.png?label=ready&title=Ready)](https://waffle.io/lordadamson/weresick)<br/> 
+[![Build Status](https://travis-ci.org/lordadamson/weresick.svg?branch=master)](https://travis-ci.org/lordadamson/weresick)  
+[![Slack Team](https://img.shields.io/badge/slack-weresick-orange.svg)](https://weresick.slack.com)  
+[![Stories in Ready](https://badge.waffle.io/lordadamson/weresick.png?label=ready&title=Ready)](https://waffle.io/lordadamson/weresick)
+
 # We're Sick
 This is a website based on a philosophy.
 
