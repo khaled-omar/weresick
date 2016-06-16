@@ -3,7 +3,7 @@
 [![Stories in Ready](https://badge.waffle.io/lordadamson/weresick.png?label=ready&title=Ready)](https://waffle.io/lordadamson/weresick)
 
 # We're Sick
-This is a website based on a philosophy.
+This is a website based on a philosophy. [Click here](http://lordadamson.github.io/weresick/) to learn more about it.
 
 ## Dependencies
 This project uses Laravel 5.2 php framework.
