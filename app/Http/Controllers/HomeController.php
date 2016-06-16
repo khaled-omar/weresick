@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Post;
 use App\Journal;
 use App\User;
@@ -17,7 +18,28 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
+    }
+
+    /**
+     * Show the Welcome page or News feed.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        if(Auth::guest())
+        {
+            return view('index');
+        }
+        else
+        {
+            $journals = Journal::all();
+
+            return view('welcome', [
+                'journals' => $journals
+            ]);
+        }
     }
 
     /**

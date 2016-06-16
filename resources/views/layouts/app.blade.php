@@ -8,9 +8,9 @@
     <title>Laravel</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet">
-    <link rel="stylesheet" href="/bootstrap-rtl/css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="{{ asset('bootstrap-rtl/css/bootstrap-rtl.min.css') }}">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -74,8 +74,8 @@
 
     <!-- JavaScripts -->
 
-    <script type="text/javascript" src="/jquery/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('jquery/jquery-2.2.3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
 
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>

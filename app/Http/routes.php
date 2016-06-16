@@ -22,7 +22,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::auth();
 
 // Application Routes...
-Route::get('/', 'HomeController@newsFeed');
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+//Route::get('/', 'HomeController@newsFeed');
 Route::get('/myJournal', 'HomeController@myJournal');
 Route::get('/journal/{id}', 'HomeController@getJournal');
 Route::post('/post', 'UserController@post');
