@@ -15,4 +15,13 @@ class Post extends Model
     {
     	return $this->hasMany('App\Tag');
     }
+
+	 public function user()
+    {
+   	return $this->belongsTo('App\User');
+    }
+	 public function journal()
+    {
+   	return $this->belongsTo('App\Journal');
+    }
 }
