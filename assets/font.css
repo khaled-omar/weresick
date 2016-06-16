@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Droid Arabic Naskh';
+	font-style: normal;
+	font-weight: normal;
+	src:
+		local('Droid Arabic Naskh'),
+		local('DroidArabicNaskh'),
+		/* from http://fonts.gstatic.com/s/droidarabicnaskh/v9/DoPHb5-mRxBWLB7ak7r4lwQQ7Md9Bhr-9YOOKRxxwAg.eot */
+		url('Droid_Arabic_Naskh.eot?#iefix') format('embedded-opentype'),
+		/* from http://fonts.gstatic.com/s/droidarabicnaskh/v9/DoPHb5-mRxBWLB7ak7r4l3qw9guB1wYJWBG7JD1o6Vs.woff */
+		url('Droid_Arabic_Naskh.woff') format('woff'),
+		/* from http://fonts.gstatic.com/s/droidarabicnaskh/v9/DoPHb5-mRxBWLB7ak7r4l23owmEGRGtAg8KXt8qkz2c.woff2 */
+		url('Droid_Arabic_Naskh.woff2') format('woff2'),
+		/* from http://fonts.gstatic.com/l/font?kit=DoPHb5-mRxBWLB7ak7r4l28SxX3J8IaPV_HXPIccdKY&skey=abdee08b981b87f9#DroidArabicNaskh */
+		url('Droid_Arabic_Naskh.svg#DroidArabicNaskh') format('svg'),
+		/* from http://fonts.gstatic.com/s/droidarabicnaskh/v9/DoPHb5-mRxBWLB7ak7r4l-vEXaiLhZejxijdYJV8mI4.ttf */
+		url('Droid_Arabic_Naskh.ttf') format('truetype');
+}

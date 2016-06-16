@@ -1,0 +1,99 @@
+body {
+    background-color: #FDFDFD;
+}
+
+h1 {
+  direction: rtl;
+	font-family: 'Droid Arabic Naskh';
+	font-size: 45px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+h2 {
+  direction: rtl;
+  align: right;
+	font-family: 'Droid Arabic Naskh';
+	font-size: 35px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+a:link {
+    direction: rtl;
+    color: black;
+    text-decoration: none;
+  	font-family: 'Droid Arabic Naskh';
+  	font-size: 35px;
+}
+a:visited {
+    direction: rtl;
+    color: black;
+    text-decoration: none;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 35px;
+}
+a:hover {
+    direction: rtl;
+    color: black;
+    color: grey;
+    text-decoration: underline;
+    font-family: 'Droid Arabic Naskh';
+    font-size: 35px;
+}
+a.readmore {
+  direction: rtl;
+  color: blue;
+  font-family: 'Droid Arabic Naskh';
+  font-size: 14px;
+}
+h3 {
+  direction: rtl;
+  align: right;
+  color: black;
+  padding-bottom: 50px;
+	font-family: 'Droid Arabic Naskh';
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+h4 {
+  direction: rtl;
+  align: right;
+  color: black;
+	font-family: 'Droid Arabic Naskh';
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+h5 {
+  direction: rtl;
+  align: right;
+  color: black;
+	font-family: 'Droid Arabic Naskh';
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+p {
+  direction: rtl;
+  align: right;
+  color: black;
+	font-family: 'Droid Arabic Naskh';
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+
+img {
+  box-shadow: -6px 7px 18px -3px rgba(0,0,0,0.8);
+}
