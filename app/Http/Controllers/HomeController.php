@@ -38,8 +38,6 @@ class HomeController extends Controller
      */
     public function getJournal(Request $request)
     {
-        //if the user should only be able to see his journal , we should check
-        //here whether the journal id belongs to him
         $journal_id = $request->id;
 
         $journal = Journal::find($journal_id);

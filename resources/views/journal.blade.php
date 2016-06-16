@@ -38,7 +38,7 @@
                                <p>
                                   <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                    <span class="lead">
-                                      <a href="{{url('/journal/'.$journal->id)}}">{{$post->user->name}}</a>
+                                      <a href="{{url('/journal/'.$post->user->journal->id)}}">{{$post->user->name}}</a>
                                    </span>
                                    <br>
                                    <small style="padding-right:25px;">يكتب:</small>
