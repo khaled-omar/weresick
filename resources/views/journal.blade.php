@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('custom_css')
+   textarea{
+      max-width:100%!important;
+      width:70%!important;
+   }
+   #postButton{
+      width:100%!important;
+   }
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -18,15 +28,15 @@
 
                             <input type="hidden" name='journal_id' value="{{ $journal->id }}"/>
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-9">
                                 <textarea class="form-control" id="post-content" name="content" rows="5" cols="40">{{ old('post') }}</textarea>
                             </div>
                         </div>
 
                         <!-- Post Button -->
                         <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-6">
-                                <button type="submit" class="btn btn-default">
+                            <div class="col-sm-offset-4 col-sm-4">
+                                <button type="submit" id="postButton" class="btn btn-default">
                                     <i class="fa fa-btn fa-plus"></i>اكتب
                                 </button>
                             </div>
