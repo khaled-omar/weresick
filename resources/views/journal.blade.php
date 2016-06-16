@@ -15,27 +15,23 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading"><h2>{{$journal->name}}</h2></div>
+                <div class="panel-heading"><h2><i class="fa fa-book" aria-hidden="true"></i> {{$journal->name}}</h2></div>
                 <div class="panel-body">
                 <!-- New Post Form -->
                     <form action="{{ url('post')}}" method="POST" class="form-horizontal">
                         {{ csrf_field() }}
-
                         <!-- Post Content -->
                         <div class="form-group">
-
                             <input type="hidden" name='journal_id' value="{{ $journal->id }}"/>
-
                             <div class="col-sm-12">
                                 <textarea class="form-control" id="post-content" name="content" rows="5" cols="40">{{ old('post') }}</textarea>
                             </div>
                         </div>
-
                         <!-- Post Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-4 col-sm-4">
                                 <button type="submit" id="postButton" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>اكتب
+                                    <i class="fa fa-plus" aria-hidden="true"></i><span> اكتب</span>
                                 </button>
                             </div>
                         </div>
@@ -44,30 +40,28 @@
                     <div class="posts">
                         @foreach ($posts as $post_id => $post)
                         <div class="post panel panel-default panel-body">
-                            <div class="user col-lg-2" style="font-family: 'Amiri', serif;">
-                               <p>
-                                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                   <span class="lead">
-                                      <a href="{{url('/journal/'.$post->user->journal->id)}}">{{$post->user->name}}</a>
-                                   </span>
-                                   <br>
-                                   <small style="padding-right:25px;">يكتب:</small>
-                                </p>
+                            <div class="user col-lg-2">
+                              <p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <a class="bigger" href="{{url('/journal/'.$post->user->journal->id)}}">{{$post->user->name}}</a>
+                                <br />
+                                <small style="padding-right:20px;">يكتب:</small>
+                              </p>
                             </div>
                             <div class="content col-lg-9 text-justify">
-                                <p style="font-size:1.4em;">{{$post->content}}</p>
+                                <p class="bigger">{{$post->content}}</p>
                             </div>
                             <div class="edit text-center col-lg-1" style="padding-top:25px;">
                                 <div class="dropdown">
                                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    <span class="glyphicon glyphicon-pencil"></span>
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
                                     <span> </span>
                                     <span class="caret"></span>
                                   </button>
                                   <ul class="dropdown-menu">
-                                    <li class="text-left"><a href="#">تعديل</a></li>
-                                    <li class="text-left"><a href="#">حذف</a></li>
-                                    <li class="text-left"><a href="#">الإبلاغ عن محتوى غير مناسب أو مسيء</a></li>
+                                    <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> تعديل</a></li>
+                                    <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i> حذف</a></li>
+                                    <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i> الأبلاغ عن المحتوى</a></li>
                                   </ul>
                                 </div>
                             </div>

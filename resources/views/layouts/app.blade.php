@@ -8,9 +8,12 @@
     <title>Laravel</title>
 
     <!-- Styles -->
+
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Amiri" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('bootstrap-rtl/css/bootstrap-rtl.min.css') }}">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/amiri-0.108-webfonts/amiri.css">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -62,7 +65,7 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>اخرج</a></li>
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> اخرج</a></li>
                             </ul>
                         </li>
                     @endif
