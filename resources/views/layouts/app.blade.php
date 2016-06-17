@@ -48,12 +48,14 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
+                @if (Auth::check())
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/myJournal') }}">كراستى</a></li>
                 </ul>
+                @endif
 
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-left">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">ادخل</a></li>
