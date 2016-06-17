@@ -61,7 +61,7 @@
                                   <ul class="dropdown-menu">
                                     <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i> تعديل</a></li>
                                     <li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i> حذف</a></li>
-                                    <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i> الأبلاغ عن المحتوى</a></li>
+                                    <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i> الإبلاغ عن المحتوى</a></li>
                                   </ul>
                                 </div>
                             </div>
