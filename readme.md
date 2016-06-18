@@ -3,7 +3,7 @@
 [![Stories in Ready](https://badge.waffle.io/lordadamson/weresick.png?label=ready&title=Ready)](https://waffle.io/lordadamson/weresick)
 
 # We're Sick
-This is a website based on a philosophy.
+This is a website based on a philosophy. [Click here](http://lordadamson.github.io/weresick/) to learn more about it.
 
 ## Dependencies
 This project uses Laravel 5.2 php framework.
@@ -18,6 +18,7 @@ This project uses Laravel 5.2 php framework.
 * `mysql -u root -p`
 * `create database weresick;`
 * `grant all privileges on weresick.* to 'weresickuser'@'localhost'identified by 'password';`
+* `exit` to get out of the mysql cmd.
 * open the .env.example file and fill in the following part:
 ```
 DB_CONNECTION=mysql
@@ -28,7 +29,6 @@ DB_USERNAME=weresickuser
 DB_PASSWORD=password
 ```
 and SAVE AS a new file called: `.env`.
-* `exit` to get out of the mysql cmd.
 * `php artisan migrate`
 * `php artisan key:generate`
 

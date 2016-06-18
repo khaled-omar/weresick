@@ -26,6 +26,7 @@ class UserController extends Controller
      */
     public function post(Request $request)
     {
+        
     	$validator = Validator::make($request->all(), [
         	'content' => 'required',
         	'journal_id' => 'required'
